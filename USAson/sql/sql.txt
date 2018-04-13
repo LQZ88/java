@@ -1,0 +1,2 @@
+create table QQ(id int primary key,password varchar2(20),name varchar2(20),age int,sex char(2),adress varchar2(50));
+commit;

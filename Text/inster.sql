@@ -1,0 +1,11 @@
+select b.FARM_NAME,a.* from XNY.EE_STATISTICS_FARM a
+join XNY.EEBAS_FARM_INFO b on a.OBJECT_ID = b.ID
+WHERE a.OBJECT_ID = 'SCWSFARM20000012'
+
+select * from XNY.EEBAS_FARM_INFO LIMIT 10;
+select * from XNY.EEWPF_CDQ_RESULT_UP LIMIT 10;
+select * from XNY.EEWPF_DQ_RESULT_UP LIMIT 10;
+select * from XNY.EEWPF_PRE_RUN_DATA LIMIT 10;
+
+
+select * from user_tables.COLUMNS

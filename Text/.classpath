@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="com/lib/|com/lib/" kind="src" path="src"/>
+	<classpathentry kind="lib" path="src/com/lib/ant.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/antlr-2.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-attributes-api.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-attributes-compiler.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-cli-1.1.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-discovery.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-net-1.4.1.jar" sourcepath="C:/Users/LQZ/AppData/Local/Temp/.org.sf.feeling.decompiler1515253411412/source/commons-net-1.4.1-sources.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-net-3.1.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-pool.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/commons-validator.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/cpdetector_1.0.10.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/juniversalchardet-1.0.3.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/poi-examples-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/poi-ooxml-3.7-20101029.jar" sourcepath="C:/Users/LQZ/AppData/Local/Temp/.org.sf.feeling.decompiler1509177377878/source/poi-ooxml-3.7-sources.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/poi-scratchpad-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/xml-apis-2.0.2.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/pinyin4j-2.5.0.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/morph-1.1.1.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/docx4j-3.1.0.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_77"/>
+	<classpathentry kind="lib" path="src/com/lib/axis-ant.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-adb-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-jaxws-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-json-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-kernel-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-spring-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-transport-http-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-transport-jms-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-transport-local-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/axis2-transport-udp-1.7.4.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/wsdl4j-1.6.2.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/jakarta-oro-2.0.7.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/Dm6JdbcDriver-1.0.jar"/>
+	<classpathentry kind="lib" path="src/com/lib/Dm7JdbcDriver-1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
