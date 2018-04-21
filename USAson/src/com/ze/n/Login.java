@@ -6,64 +6,66 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import com.oracle.*;
+
+import com.conn.MysqlConn;
 public class Login {
 	public Login(){
-		final JFrame Log = new JFrame("µÇÂ¼");
-		Log.setFont(new Font("¿¬Ìå", Font.PLAIN, 12)); 
+		final JFrame Log = new JFrame("ç™»å½•");
+		Log.setFont(new Font("æ¥·ä½“", Font.PLAIN, 12)); 
 		Log.getContentPane().setLayout(null);
-		Log.setSize(300, 300);  //¿í   ¸ß
-		Log.setLocationRelativeTo(null);  //¾ÓÖĞ
-		Log.setResizable(false);//²»¿É·Å´ó
-		Log.getContentPane().setBackground(Color.PINK); //±³¾°ÑÕÉ«
+		Log.setSize(300, 300);  //å®½   é«˜
+		Log.setLocationRelativeTo(null);  //å±…ä¸­
+		Log.setResizable(false);//ä¸å¯æ”¾å¤§
+		Log.getContentPane().setBackground(Color.PINK); //èƒŒæ™¯é¢œè‰²
 		
 		final JLabel lblid = new JLabel();
-		lblid.setText("ÕËºÅ:");
-		lblid.setBounds(50, 50, 80,40);//x×ó,yÉÏ,k¿í,h³¤
+		lblid.setText("è´¦å·:");
+		lblid.setBounds(50, 50, 80,40);//xå·¦,yä¸Š,kå®½,hé•¿
 		Log.add(lblid);
 		
 		final JLabel lblpass = new JLabel();
-		lblpass.setText("ÃÜÂë:");
+		lblpass.setText("å¯†ç :");
 		lblpass.setBounds(50, 100, 80, 40);
 		Log.add(lblpass);
 		
-		final JTextField txtid = new JTextField();//ÕËºÅ¿ò
+		final JTextField txtid = new JTextField();//è´¦å·æ¡†
 		txtid.setBounds(100, 60, 95, 20);
 		Log.add(txtid);
 		
-		final JPasswordField txtpass= new JPasswordField();//ÃÜÂë¿ò
+		final JPasswordField txtpass= new JPasswordField();//å¯†ç æ¡†
 		txtpass.setBounds(100, 110, 95, 20);
 		Log.add(txtpass);
 		
 		final JButton btnok = new JButton();
 		btnok.setBounds(50, 200, 60, 20);//x,y,k,h
 		btnok.setMnemonic('E'); //Alt1 +E
-		btnok.setText("µÇÂ¼");
-		btnok.addActionListener(new ActionListener(){//Ìá½»µÇÂ¼
+		btnok.setText("ç™»å½•");
+		btnok.addActionListener(new ActionListener(){//æäº¤ç™»å½•
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e){
 				if(e.getSource()==btnok){
 					if(txtid.getText().length()==0){
-						JOptionPane.showMessageDialog(null, "ÕËºÅ²»ÄÜÎª¿Õ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "è´¦å·ä¸èƒ½ä¸ºç©ºï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE);
 						txtid.requestFocus();
 						return;
 					}
 					if(txtpass.getText().equals("")){
-						JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "å¯†ç ä¸èƒ½ä¸ºç©ºï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE);
 						txtpass.requestFocus(true);
 						return;
 					}
-					if(Getcon.Login(txtid.getText(),txtpass.getText())){
+					if(MysqlConn.toLogin(txtid.getText(),txtpass.getText())){
 						Log.dispose();
 						new Main();
 					}else{
-						JOptionPane.showMessageDialog(null, "ÃÜÂë´íÎó»òÓÃ»§²»´æÔÚ£¡", "ÌáÊ¾", JOptionPane.ERROR_MESSAGE);			
+						JOptionPane.showMessageDialog(null, "å¯†ç é”™è¯¯æˆ–ç”¨æˆ·ä¸å­˜åœ¨ï¼", "æç¤º", JOptionPane.ERROR_MESSAGE);			
 						txtid.setText("");					
 						txtpass.setText("");
 					}
@@ -72,7 +74,7 @@ public class Login {
 		});
 		Log.add(btnok);
 		final JLabel lblreslut = new JLabel();
-		lblreslut.setText("×¢ ²á");
+		lblreslut.setText("æ³¨ å†Œ");
 		lblreslut.setBounds(220, 100, 80,40);//x,y,k,h
 		lblreslut.addMouseListener(new MouseListener(){
 			public void mouseClicked(MouseEvent e) {
@@ -92,17 +94,17 @@ public class Login {
 		final JButton btnbreak=new JButton();
 		btnbreak.setBounds(150, 200, 60, 20);
 		btnbreak.setMnemonic('B');
-		btnbreak.setText("¹Ø±Õ");
+		btnbreak.setText("å…³é—­");
 		btnbreak.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource()==btnbreak){
-					Log.dispose();//¹Ø±Õ
+					Log.dispose();//å…³é—­
 					System.exit(0);
 				}
 			}
 		});
 		Log.add(btnbreak);
-		Log.setVisible(true);  //Æô¶¯´°Ìå
+		Log.setVisible(true);  //å¯åŠ¨çª—ä½“
 	}
 	
 	

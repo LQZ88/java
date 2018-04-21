@@ -7,39 +7,41 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 
-import com.oracle.cn.DBuser;
-import com.oracle.cn.Getcon;
+import com.DbList;
+import com.conn.MysqlConn;
 
 public class Main {
 	public Main(){
-		final JFrame min = new JFrame("»¶Ó­µÇÂ¼");
-		min.setFont(new Font("¿¬Ìå", Font.PLAIN, 12)); 
+		final JFrame min = new JFrame("æ¬¢è¿ç™»å½•");
+		min.setFont(new Font("æ¥·ä½“", Font.PLAIN, 12)); 
 		min.getContentPane().setLayout(null);
-		min.setSize(480,400);  //¿í   ¸ß
-		min.setLocationRelativeTo(null);  //¾ÓÖĞ
-		min.setResizable(false);//²»¿É·Å´ó
-		min.getContentPane().setBackground(Color.white); //±³¾°ÑÕÉ«
+		min.setSize(480,400);  //å®½   é«˜
+		min.setLocationRelativeTo(null);  //å±…ä¸­
+		min.setResizable(false);//ä¸å¯æ”¾å¤§
+		min.getContentPane().setBackground(Color.white); //èƒŒæ™¯é¢œè‰²
 		
 		//final 
         
 		final List txtlist=new List();
         txtlist.setEnabled(false);
-        ArrayList<DBuser> list;
-		list = Getcon.getselect();
-		txtlist.add("ÓÃ»§ID", 0);
-		txtlist.add("ÓÃ»§ID"+"ĞÕÃû"+"ÃÜÂë"+"ĞÔ±ğ"+"µÇÂ¼´ÎÊı");
-		for(Iterator<DBuser> it=list.iterator();it.hasNext();){
-			DBuser s=it.next();
+        /*
+        ArrayList<DbList> list;
+		list = MysqlConn.getselect();
+		txtlist.add("ç”¨æˆ·ID", 0);
+		txtlist.add("ç”¨æˆ·ID"+"å§“å"+"å¯†ç "+"æ€§åˆ«"+"ç™»å½•æ¬¡æ•°");
+		for(Iterator<DbList> it=list.iterator();it.hasNext();){
+			DbList s=it.next();
 			txtlist.add(s.getTxtid()+s.getTxtname()+s.getTxtpwd()+s.getTxtsex()+s.getTxtcount());
 		}
-        final JScrollPane slistname=new JScrollPane(txtlist,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);//ÉèÖÃ¹ö¶¯Ìõ,Ë®Æ½ºÍ´¹Ö±¹ö¶¯ÌõÊ¼ÖÕÏÔÊ¾
-        slistname.setBounds(30, 20, 250, 250);//ÉèÖÃ×é¼şÎ»ÖÃ¼°´óĞ¡
-        min.add(slistname);//Ìí¼Ó×é¼ş
-        
+        final JScrollPane slistname=new JScrollPane(txtlist,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);//è®¾ç½®æ»šåŠ¨æ¡,æ°´å¹³å’Œå‚ç›´æ»šåŠ¨æ¡å§‹ç»ˆæ˜¾ç¤º
+        slistname.setBounds(30, 20, 250, 250);//è®¾ç½®ç»„ä»¶ä½ç½®åŠå¤§å°
+        min.add(slistname);//æ·»åŠ ç»„ä»¶
+        */
 		
         final JButton btnok=new JButton("");
 		btnok.setBounds(80, 300, 60, 20);
@@ -52,7 +54,7 @@ public class Main {
 		});
 		
 		
-		final JButton btnexit=new JButton("¹Ø±Õ");
+		final JButton btnexit=new JButton("å…³é—­");
 		btnexit.setBounds(350, 300, 60, 20);
 		min.add(btnexit);
 		btnexit.addActionListener(new ActionListener(){
@@ -70,10 +72,10 @@ public class Main {
 		
 		
 		try {
-			Thread.sleep(1000);//1ÃëºóÆô¶¯
-			min.setVisible(true);  //Æô¶¯´°Ìå
+			Thread.sleep(1000);//1ç§’åå¯åŠ¨
+			min.setVisible(true);  //å¯åŠ¨çª—ä½“
 		} catch (InterruptedException e) {
-			System.out.println("Æô¶¯Ê§°Ü"+e.getMessage());
+			System.out.println("å¯åŠ¨å¤±è´¥"+e.getMessage());
 		}
 	}
 	

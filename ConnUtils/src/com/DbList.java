@@ -1,6 +1,10 @@
-package com.oracle;
-
-public class DBlist {
+package com;
+/**
+ * 
+ * @author LQZ
+ *
+ */
+public class DbList {
 	String id;
 	String password;
 	String name;
