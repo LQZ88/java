@@ -25,9 +25,6 @@ public class ConnUtils {
 	 */
 	private static Connection con = null;
 	public static ConnData connData = null;
-	static {
-		getMysqlCON();
-	}
 	/**
 	 * 获取数据库链接
 	 * 
@@ -61,10 +58,7 @@ public class ConnUtils {
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>(16);
 		PreparedStatement preStat = null;
 		try {
-			if(con.isClosed()){
-				con=null;
-				con = getMysqlCON();
-			}
+			con = getMysqlCON();
 			preStat = con.prepareStatement(sql);
 			ResultSet rs = preStat.executeQuery();
 			ResultSetMetaData rsMeta = rs.getMetaData();
@@ -100,10 +94,7 @@ public class ConnUtils {
 		boolean flag = false;
 		Statement stmt = null;
 		try {
-			if(con.isClosed()){
-				con=null;
-				con = getMysqlCON();
-			}
+			con = getMysqlCON();
 			stmt = con.createStatement();
 			if(sql.toLowerCase().indexOf(Sel.toLowerCase())==0){
 				ResultSet rs = stmt.executeQuery(sql);
@@ -128,10 +119,12 @@ public class ConnUtils {
 	}
 	public static void main(String[] args) {
 		//ConnUtils.isSuccess("insert into userinfo(name, sex, age, adress, password) value ('liqize','na','22','yun','123')");
-		/*List<Map<String, Object>> doquery = doquery("select * from qq");
+		System.out.println(ConnUtils.isSuccess("select * from userinfo"));
+		List<Map<String, Object>> doquery = doquery("select * from userinfo");
 		System.out.println(doquery);
 		for(Map<String, Object> map: doquery){
 			System.out.println(map.get("sex"));
-		}*/
+		}
+		
 	}
 }

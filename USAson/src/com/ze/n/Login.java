@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import com.conn.MysqlConn;
+import com.conn.ConnUtils;
 public class Login {
 	public Login(){
 		final JFrame Log = new JFrame("登录");
@@ -26,7 +26,7 @@ public class Login {
 		Log.getContentPane().setBackground(Color.PINK); //背景颜色
 		
 		final JLabel lblid = new JLabel();
-		lblid.setText("账号:");
+		lblid.setText("用户名:");
 		lblid.setBounds(50, 50, 80,40);//x左,y上,k宽,h长
 		Log.add(lblid);
 		
@@ -51,6 +51,7 @@ public class Login {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e){
 				if(e.getSource()==btnok){
+					String sql="select * from userInfo where name = '"+txtid.getText()+"' and password = '"+txtpass.getText()+"'";
 					if(txtid.getText().length()==0){
 						JOptionPane.showMessageDialog(null, "账号不能为空！", "提示", JOptionPane.INFORMATION_MESSAGE);
 						txtid.requestFocus();
@@ -61,7 +62,7 @@ public class Login {
 						txtpass.requestFocus(true);
 						return;
 					}
-					if(MysqlConn.toLogin(txtid.getText(),txtpass.getText())){
+					if(ConnUtils.isSuccess(sql)){
 						Log.dispose();
 						new Main();
 					}else{

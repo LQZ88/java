@@ -1,2 +1,10 @@
-create table QQ(id int primary key,password varchar2(20),name varchar2(20),age int,sex char(2),adress varchar2(50));
-commit;
+DROP TABLE IF EXISTS userInfo;
+CREATE TABLE userInfo (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(20) DEFAULT NULL,
+  sex char(2) DEFAULT NULL,
+  age int(5) DEFAULT NULL,
+  adress varchar(50) DEFAULT NULL,
+  password varchar(50) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

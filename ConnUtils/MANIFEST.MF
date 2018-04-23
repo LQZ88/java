@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: ConnUtils.jar
+Main-Class: com.conn.ConnUtils
+Sealed: true
+

@@ -5,15 +5,9 @@ import java.awt.Font;
 import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Iterator;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JScrollPane;
-
-import com.DbList;
-import com.conn.MysqlConn;
 
 public class Main {
 	public Main(){
